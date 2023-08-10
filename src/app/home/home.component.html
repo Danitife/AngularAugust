@@ -1,0 +1,19 @@
+<style>
+    p{
+        color: green;
+    }
+</style>
+
+<p>My name is {{name | lowercase}}</p>
+<p>My name is {{name | uppercase}}</p>
+
+<h2>{{date | date}}</h2>
+<h2>{{date | date:"shortTime"}}</h2>
+
+<h1>{{5000 | currency:"NGN"}}</h1>
+<input [(ngModel)]="todo" type="text">
+<button (click)="addTodo()">Add Todo</button>
+<h1 *ngIf="allTodo.length == 0"> There's no todo</h1>
+<div *ngFor="let i = index; let element of allTodo">
+    <h1>{{element}} <button (click)="delTodo(i)">&times;</button></h1>
+</div>

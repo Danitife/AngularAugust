@@ -1,0 +1,24 @@
+<p>login works!</p>
+<form (ngSubmit)="login()" action="">
+    <input
+     class="form-control"
+     name="username"
+     [(ngModel)]="username"
+     minlength="5"
+     #usernamme="ngModel"
+     [class.is-invalid]="usernamme.touched && usernamme.invalid"
+     [class.is-valid]="usernamme.touched && usernamme.valid"
+     required="true" type="text">
+     <div *ngIf="usernamme.touched">
+        <span class="text-sm fw-bold text-danger" *ngIf="usernamme?.errors?.['required']">
+            This input field is required
+        </span>
+        <span class="text-sm fw-bold text-danger" *ngIf="usernamme?.errors?.['minlength']">
+            Username cannot be less than 5 characters
+        </span>
+     </div>
+     <br><br>
+
+    <input name="password" [(ngModel)]="password" type="text"><br><br>
+    <button>Login</button>
+</form>

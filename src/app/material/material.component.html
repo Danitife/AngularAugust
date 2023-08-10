@@ -1,0 +1,53 @@
+<p>material works!</p>
+<mat-drawer-container style="height: 100vh;" class="example-container" [hasBackdrop]="hasBackdrop.value">
+    <mat-drawer class="w-25" #drawer [mode]="mode.value">
+      <button (click)="toggleTT()" mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+        <div>
+            <p>Menu</p>
+            <p>Menu</p>
+            <p>Menu</p>
+            <p>Menu</p>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <button *ngIf="tt" (click)="toggleTT()" mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+      <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+        Snackbar
+      </button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+        <mat-icon>heart_broken</mat-icon>
+      </button>
+      <mat-form-field>
+        <mat-label>Sidenav mode</mat-label>
+        <mat-select #mode value="side">
+          <mat-option value="side">Side</mat-option>
+          <mat-option value="over">Over</mat-option>
+          <mat-option value="push">Push</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Has backdrop</mat-label>
+        <mat-select #hasBackdrop>
+          <mat-option>Unset</mat-option>
+          <mat-option [value]="true">True</mat-option>
+          <mat-option [value]="false">False</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-drawer-content>
+  </mat-drawer-container>
+<button mat-button>Basic</button>
+    <button mat-button color="primary">Primary</button>
+    <button mat-button color="accent">Accent</button>
+    <button mat-button color="warn">Warn</button>
+    <button mat-button disabled>Disabled</button>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>

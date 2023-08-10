@@ -1,0 +1,31 @@
+<h1>Grocies App</h1>
+
+<main class="w-50 border shadow p-3 rounded">
+    <form action="">
+        <div class="form-group">
+            <label for="">Budget Amount</label>
+            <input [(ngModel)]="budgetAmount" name="b_Amount" type="text" class="form-control my-3">
+        </div>
+        <div class="form-group">
+            <label for="">Select day</label>
+            <input [(ngModel)]="date" name="date" type="date" class="form-control my-3">
+        </div>
+        <div class="form-group">
+            <label for="">Add Item</label>
+            <div class="border p-1">
+                <input name="inputItem" [(ngModel)]="inputItem" type="text" class="form-control my-3" placeholder="Add Item">
+                <input name="inputPrice" [(ngModel)]="inputPrice" type="text" class="form-control my-3" placeholder="Add Price">
+                <button (click)="addItems()" class="btn btn-info">Add Item</button>
+            </div>
+            <div class="d-flex flex-wrap">
+                <p class="rounded-pill bg-warning px-2 py-1" *ngFor="let i = index; let item of items">
+                    <span>{{item.inputItem}} : {{item.inputPrice | currency: "NGN"}}</span>
+                    <button class="btn btn-danger btn-sm" (click)="delItems(i)">&times;</button>
+                </p>
+            </div>
+        </div>
+        <div>
+            <button (click)="saveBudget()" class="btn btn-info text-white fw-bold">Save Budget</button>
+        </div>
+    </form>
+</main>

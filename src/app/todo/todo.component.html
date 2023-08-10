@@ -1,0 +1,10 @@
+<p>todo works!</p>
+<button (click)="logout()">Logout</button>
+<div class="d-flex justify-content-evenly flex-wrap">
+    <div class="card shadow border m-1 w-25" *ngFor="let item of users.users">
+        <a routerLink="{{item.id}}">
+            <img src="{{item.image}}" alt="">
+        </a>
+        <p class="text-center">{{item.username}}</p>
+    </div>
+</div>
