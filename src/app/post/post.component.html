@@ -1,0 +1,20 @@
+<p>post works!</p>
+<h1>Create A Post</h1>
+<form action="">
+    <input name="author" [(ngModel)]="author" class="form-control" type="text">
+    <input name="title" [(ngModel)]="title" class="form-control" type="text">
+    <textarea name="content" [(ngModel)]="content"></textarea>
+    <button (click)="createPost($event)" class="btn btn-dark">Post</button>
+</form>
+
+<main>
+    <h2>All Post</h2>
+    <div *ngIf="allBlog == ''">
+        <h1>There is no Blog</h1>
+    </div>
+    <div *ngFor="let item of allBlog; let i = index">
+        <button (click)="del(i)">&times;</button>
+        <h3>{{i}}. {{item.author}}</h3>
+        <button (click)="toggleLike(i)">{{item.isLike == false? "Like": "UnLike"}}</button>
+    </div>
+</main>

@@ -1,0 +1,19 @@
+<p>home works!</p>
+<h1>Add Todo</h1>
+<input type="text" [(ngModel)]="todo">
+<button (click)="addTodo()">Add Todo</button>
+<button (click)="toggleTable()">
+    <span *ngIf="showTable">Hide Table</span>
+    <span *ngIf="!showTable">Show Table</span>
+</button>
+<h1>List of Todo</h1>
+<h1 *ngIf="AllTodo.length == 0"> There are no Todo</h1>
+<p *ngFor="let id = index; let todo of AllTodo">
+    <span>{{todo}}</span>
+    <button routerLink="/one_post/{{id}}">...</button>
+    <button (click)="delTodo(id)">&times;</button>
+</p>
+
+<div *ngFor="let item of namesArr">
+    <p>{{item}}</p>
+</div>
