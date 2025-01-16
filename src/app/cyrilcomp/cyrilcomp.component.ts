@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./cyrilcomp.component.css']
 })
 export class CyrilcompComponent {
+  isBoldi = true
+  isItalic = true
+
+  textColor = 'green';
+
+  isBold = true;
 
 }

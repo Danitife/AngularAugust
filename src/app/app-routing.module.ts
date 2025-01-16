@@ -9,6 +9,7 @@ import { userGuardGuard } from './guards/user-guard.guard';
 import { LoginComponent } from './login/login.component';
 import { ShopFormComponent } from './shop-form/shop-form.component';
 import { MaterialComponent } from './material/material.component';
+import { CyrilcompComponent } from './cyrilcomp/cyrilcomp.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: "full"},
@@ -21,7 +22,9 @@ const routes: Routes = [
   {path: "todo/:id", component: OneTodoComponent},
   {path: "login", component: LoginComponent},
   {path: "shop-form", component: ShopFormComponent},
-  {path: "material", component: MaterialComponent}
+  {path: "material", component: MaterialComponent},
+  {path: "cy", component: CyrilcompComponent}
+
 ];
 
 @NgModule({

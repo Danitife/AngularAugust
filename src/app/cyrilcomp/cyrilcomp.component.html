@@ -1,1 +1,7 @@
-<p>cyrilcomp works!</p>
+<p [class.bold]="isBoldi" [class.italic]="isItalic">
+    This is a paragraph.
+</p>
+<p [style.color]="'blue'">This is a paragraph.</p>
+<p [style.color]="textColor">Welcome 🎉🎉</p>
+
+<p [style.fontWeight]="isBold ? 'bold' : 'normal'">Text</p>
