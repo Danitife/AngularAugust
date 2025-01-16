@@ -19,6 +19,7 @@ import { ShopFormComponent } from './shop-form/shop-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponent } from './material/material.component';
 import { MaterialModule } from './materials/material/material.module';
+import { MineComponent } from './mine/mine.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MaterialModule } from './materials/material/material.module';
     OneTodoComponent,
     LoginComponent,
     ShopFormComponent,
-    MaterialComponent
+    MaterialComponent,
+    MineComponent
   ],
   imports: [
     BrowserModule,
